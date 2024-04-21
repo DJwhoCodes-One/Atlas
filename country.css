@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Nunito sans, sans-serif;
+}
+
+:root {
+  --background-color: white;
+  --text-color: black;
+  --elements-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --elements-color: hsl(209, 23%, 22%);
+  --searchBox-color: white;
+  --headerText-color: rgb(255, 255, 255);
+}
+
+.themeSwitcher {
+  cursor: pointer;
+}
+
+.header {
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  background-color: var(--elements-color);
+  color: var(--headerText-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: 20px;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--text-color);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  padding-inline: 15px;
+  padding-block: 3px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.country-details {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.flag {
+  width: 40%;
+  box-shadow: 0 2px 8px 0 rgba(110, 102, 102, 0.2);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 170px;
+  max-width: 300px;
+  flex-wrap: wrap;
+  column-gap: 64px;
+}
+
+.borders {
+  display: flex;
+  gap: 10px;
+}
+
+.borderCountries {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 979px) {
+  .country-details {
+    gap: 40px;
+  }
+
+  .details {
+    column-gap: 30px;
+  }
+}
+
+.title a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .back-btn {
+    margin-left: 15px;
+  }
+
+  .country-details {
+    flex-direction: column;
+    gap: 40px;
+    /* border: 2px solid red; */
+    align-items: start;
+  }
+
+  .flag {
+    width: 70%;
+    margin-bottom: 20px;
+    margin-inline: auto;
+  }
+
+  .right {
+    gap: 30px;
+    margin-left: 15px;
+  }
+
+  .details {
+    max-height: none;
+  }
+}
